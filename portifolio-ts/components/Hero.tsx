@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // atalho react+es7 tsrfc
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
@@ -17,8 +18,11 @@ export default function Hero({}: Props) {
     });
 
   return (
-    <div>
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
+        <img className="relative rounded-full h-32 w-32 mx-auto object-cover"
+          src="./assets/bg.png" alt="" 
+        />
         <h1>
         <span>{text}</span>
         <Cursor cursorColor='#F7AB0A' />
