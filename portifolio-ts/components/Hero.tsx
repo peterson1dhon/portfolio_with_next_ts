@@ -20,13 +20,23 @@ export default function Hero({}: Props) {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
         <BackgroundCircles />
-        <img className="relative rounded-full h-32 w-32 mx-auto object-cover"
-          src="./assets/bg.png" alt="" 
+        <img className="relative border border-white rounded-full h-40 w-40 mx-auto object-cover"
+          src="/assets/bg.png" alt="perfil" 
         />
-        <h1>
+        <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
+          Full Stack developer
+        </h2>
+        <h1 className='text-5xl lg-text-6xl font-semibold px-10'>
         <span>{text}</span>
         <Cursor cursorColor='#F7AB0A' />
         </h1>
+
+        <div>
+          <button className="heroButton">Sobre</button>
+          <button className="heroButton">Experiencia</button>
+          <button className="heroButton">Habilidades</button>
+          <button className="heroButton">Projetos</button>
+        </div>
     </div>
   );
 }
